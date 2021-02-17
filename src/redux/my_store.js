@@ -48,7 +48,7 @@ export let store = {
             newPosttext: '',
         },
         friendsPage: {
-            friendsOneFriendData: [
+            friendsAllUsersData: [
                 {name:'Misha', last_message:'I wanna play Dota 2', online:'online'},
                 {name:'Sasha', last_message:'I wanna play Dota 2 too', online:'offline'},
                 {name:'Masha', last_message:'I wanna play Dota 2 too 2', online:'offline'},

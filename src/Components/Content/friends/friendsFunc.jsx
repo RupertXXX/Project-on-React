@@ -5,7 +5,7 @@ import c from './friends.module.css';
 const FriendsFunc = (props) => {
 
     let makeArrayOnefriend = () => {
-        let friendsOneFriendData_is = props.friends_onefriend.map (obj => 
+        let friendsAllUsersData_is = props.friends_onefriend.map (obj => 
             <Onefriend name={obj.name} 
                 followed={obj.followed} 
                 photos={obj.photos} 
@@ -15,7 +15,7 @@ const FriendsFunc = (props) => {
                 followFriend={props.followFriend} 
                 unfollowFriend={props.unfollowFriend} 
             />);
-        return friendsOneFriendData_is;
+        return friendsAllUsersData_is;
     }
 
     let makeArrayCounter = () => {

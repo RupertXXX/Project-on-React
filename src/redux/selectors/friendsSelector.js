@@ -1,7 +1,7 @@
 import {createSelector} from 'reselect';
 
 const getFriends = (state) => {
-    let friends = state.friendsPage.friendsOneFriendData;
+    let friends = state.friendsPage.friendsAllUsersData;
     return friends;
 };
 export const getFriendsComplecated = createSelector( getFriends, (friends) => {

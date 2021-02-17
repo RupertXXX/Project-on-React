@@ -31,7 +31,7 @@ let profilePostsData = [
     {number:"3", message:"Profile! It's my thirth post. It's becoming boring.", id: 3},
     {number:"4", message:"Profile! It's time to stop!", id: 4},
 ];
-let friendsOneFriendData = [
+let friendsAllUsersData = [
     {name:'Misha', last_message:'I wanna play Dota 2', online:'online'},
     {name:'Sasha', last_message:'I wanna play Dota 2 too', online:'offline'},
     {name:'Masha', last_message:'I wanna play Dota 2 too', online:'offline'},
@@ -40,7 +40,7 @@ let friendsOneFriendData = [
 ];
 
 friendsReducer, data:
-friendsOneFriendData: [
+friendsAllUsersData: [
         {name:'Misha', follow: 0, last_message:'I wanna play Dota 2', online:'online', id: 1},
         {name:'Sasha', follow: 0, last_message:'I wanna play Dota 2 too', online:'offline', id: 2},
         {name:'Masha', follow: 0, last_message:'I wanna play Dota 2 too 2', online:'offline', id: 3},

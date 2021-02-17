@@ -10,7 +10,7 @@ const FETCHING_IS_NOT = 'FETCHING_IS_NOT';
 const FRIENDS_FOLLOW_IN_PROGRESS_TOGGLE = 'FRIENDS_FOLLOW_IN_PROGRESS_TOGGLE';
 
 let initialState = {
-    friendsOneFriendData: [], /*friendsAllUsersData*/
+    friendsAllUsersData: [], /*friendsAllUsersData*/
     friendsData: [],
     pageSize: 15,
     totalFriendsCount: 0,
@@ -25,7 +25,7 @@ const friendsReducer = (state = initialState, action) => {
         case FOLLOW_ON_FRIENDS: 
             return {
                 ...state,
-                friendsOneFriendData: state.friendsOneFriendData.map(u => {
+                friendsAllUsersData: state.friendsAllUsersData.map(u => {
                     if(u.id === action.index) {
                         return {...u, followed: true}
                     }
@@ -35,7 +35,7 @@ const friendsReducer = (state = initialState, action) => {
         case UNFOLLOW_ON_FRIENDS:
             return {
                 ...state,
-                friendsOneFriendData: state.friendsOneFriendData.map(u => {
+                friendsAllUsersData: state.friendsAllUsersData.map(u => {
                     if(u.id === action.index) {
                         return {...u, followed: false}
                     }
@@ -45,7 +45,7 @@ const friendsReducer = (state = initialState, action) => {
         case SET_FRIENDS:
             return {
                 ...state,
-                friendsOneFriendData: action.friends,
+                friendsAllUsersData: action.friends,
             }
         case SELECT_PAGE:
             return {
@@ -62,7 +62,7 @@ const friendsReducer = (state = initialState, action) => {
             return {
                 ...state,
                 isFetching: true,
-                friendsOneFriendData: [],
+                friendsAllUsersData: [],
                 totalFriendsCount: 0,
             }
         case FETCHING_IS_NOT:
