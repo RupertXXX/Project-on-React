@@ -1,0 +1,15 @@
+.logout {
+    outline: none;
+    border: 1px solid rgba(210, 210, 210, 1);;
+    width: 120px;
+    height: 40px;
+    color: white;
+    background-color: rgb(227,30,37);
+    border-radius: 5px;
+    cursor: pointer;
+}
+.logout:hover {
+    width: 122px;
+    height: 40px;
+    border: none;
+}

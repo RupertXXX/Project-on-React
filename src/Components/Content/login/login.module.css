@@ -1,0 +1,13 @@
+.main{
+    min-height: 540px;
+}
+button{
+    cursor: pointer;
+}
+.mass_error{
+    color: rgba(227,30,37, 1);
+}
+/* .main_form{
+    display: flex;
+    flex-direction: column;
+} */

@@ -1,0 +1,46 @@
+.one_friend{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 10px 15px 10px;
+}
+.person{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 320px;
+}
+.avatar{
+    border: 2px solid  rgba(116, 116, 116, 0.7);
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    margin: 0 10px 0 0;
+}
+.avatar img{
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+}
+.name{
+    font-size: 20px;
+    margin: 0 0 0 10px;
+    width: 140px;
+}
+.last_message{
+    color: rgba(116, 116, 116, 0.7);
+    text-align: left;
+}
+.online{
+    text-align: right;
+    color: rgb(88, 88, 88);
+}
+.follow{
+    cursor: pointer;
+    margin-left: 30px;
+    width: 80px;
+    border: 1px solid rgb(88, 88, 88);
+    outline: none;
+    text-align: center;
+    background-color: rgba(116, 116, 116, 0.7);
+}

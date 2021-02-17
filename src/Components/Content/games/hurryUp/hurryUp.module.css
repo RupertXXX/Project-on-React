@@ -1,0 +1,23 @@
+.divs{
+    display: inline-block;
+    width: 150px;
+    color: white;
+    background-color: grey;
+    height: 25px;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding-left: 8px;
+}
+.spans {
+    background-color: green;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-top: 5px;
+    padding: 0 0 5px 0;
+    font-size: 35px;
+    cursor: pointer;
+    text-align: center;
+    border: none;
+    outline: none;
+}

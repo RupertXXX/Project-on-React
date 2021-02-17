@@ -1,0 +1,178 @@
+
+Math.floor(Math.random() * (max - min + 1)) + min;
+
+//data:
+
+let dialogsData = [
+    {name:'Misha', id: 1},
+    {name:'Sasha', id: 2},
+    {name:'Masha', id: 3},
+    {name:'Pasha', id: 4},
+    {name:'Dashulya', id: 5},
+];
+let messagesData = [
+    {message:'Hello', id: 1},
+    {message:"Hi, what's up man?", id: 2},
+    {message:'I wanna play DOTA 2', id: 3},
+    {message:"Oh you wanna spin someone's guts, about 20 minutes", id: 4},
+    {message:"Yeah it's what i really thought about", id: 5},
+    {message:'new message left', id: 7},
+    {message:'new message right', id: 16},
+];
+let newsPostsData = [
+    {number:"1", message:"It's my first post! I'm really so happy to do it", id: 1},
+    {number:"2", message:"It's my second post. Do this post it's OK", id: 2},
+    {number:"3", message:"It's my thirth post. It's becoming boring.", id: 3},
+    {number:"4", message:"It's time to stop!", id: 4},
+];
+let profilePostsData = [
+    {number:"1", message:"Profile! It's my first post! I'm really so happy to do it", id: 1},
+    {number:"2", message:"Profile! It's my second post. Do this post it's OK", id: 2},
+    {number:"3", message:"Profile! It's my thirth post. It's becoming boring.", id: 3},
+    {number:"4", message:"Profile! It's time to stop!", id: 4},
+];
+let friendsOneFriendData = [
+    {name:'Misha', last_message:'I wanna play Dota 2', online:'online'},
+    {name:'Sasha', last_message:'I wanna play Dota 2 too', online:'offline'},
+    {name:'Masha', last_message:'I wanna play Dota 2 too', online:'offline'},
+    {name:'Pasha', last_message:'I wanna play Dota 2 too', online:'online'},
+    {name:'Dashulya', last_message:'I wanna play Dota 2 too', online:'online'},
+];
+
+friendsReducer, data:
+friendsOneFriendData: [
+        {name:'Misha', follow: 0, last_message:'I wanna play Dota 2', online:'online', id: 1},
+        {name:'Sasha', follow: 0, last_message:'I wanna play Dota 2 too', online:'offline', id: 2},
+        {name:'Masha', follow: 0, last_message:'I wanna play Dota 2 too 2', online:'offline', id: 3},
+        {name:'Pasha', follow: 1, last_message:'I wanna play Dota 2 too 3', online:'online', id: 4},
+        {name:'Dashulya', follow: 0, last_message:'I wanna play Dota 2 too 4', online:'online', id: 5},
+        {name:'Mihan', follow: 0, last_message:'I wanna play Dota 2 too 5', online:'online', id: 6},
+    ],
+    friendsAllFriendsData: [
+        {name:'Misha', follow: 0, last_message:'I wanna play Dota 2', online:'online', id: 1},
+        {name:'Sasha', follow: 0, last_message:'I wanna play Dota 2 too', online:'offline', id: 2},
+        {name:'Masha', follow: 0, last_message:'I wanna play Dota 2 too 2', online:'offline', id: 3},
+        {name:'Pasha', follow: 0, last_message:'I wanna play Dota 2 too 3', online:'online', id: 4},
+        {name:'Dashulya', follow: 0, last_message:'I wanna play Dota 2 too 4', online:'online', id: 5},
+        {name:'Mihan', follow: 0, last_message:'I wanna play Dota 2 too 5', online:'online', id: 6},
+        {name:'Lupa', follow: 0, last_message:'I wanna play Dota 2 too 6', online:'offline', id: 7},
+        {name:'Pupa', follow: 0, last_message:'I wanna play Dota 2 too 7', online:'offline', id: 8},
+        {name:'Pahan', follow: 0, last_message:'I wanna play Dota 2 too 8', online:'online', id: 9},
+        {name:'Max', follow: 0, last_message:'I wanna play Dota 2 too 9', online:'offline', id: 10},
+        {name:'Kiril', follow: 0, last_message:'I wanna play Dota 2 too 10', online:'offline', id: 11},
+        {name:'Katya', follow: 0, last_message:'I wanna play Dota 2 too 11', online:'online', id: 12},
+        {name:'Misha', follow: 0, last_message:'I wanna play Dota 2', online:'online', id: 13},
+        {name:'Sasha', follow: 0, last_message:'I wanna play Dota 2 too', online:'offline', id: 14},
+        {name:'Masha', follow: 0, last_message:'I wanna play Dota 2 too 2', online:'offline', id: 15},
+        {name:'Pasha', follow: 0, last_message:'I wanna play Dota 2 too 3', online:'online', id: 16},
+        {name:'Dashulya', follow: 0, last_message:'I wanna play Dota 2 too 4', online:'online', id: 17},
+        {name:'Mihan', follow: 0, last_message:'I wanna play Dota 2 too 5', online:'online', id: 18},
+        {name:'Lupa', follow: 0, last_message:'I wanna play Dota 2 too 6', online:'offline', id: 19},
+        {name:'Pupa', follow: 0, last_message:'I wanna play Dota 2 too 7', online:'offline', id: 20},
+        {name:'Pahan', follow: 0, last_message:'I wanna play Dota 2 too 8', online:'online', id: 21},
+        {name:'Max', follow: 0, last_message:'I wanna play Dota 2 too 9', online:'offline', id: 22},
+        {name:'Kiril', follow: 0, last_message:'I wanna play Dota 2 too 10', online:'offline', id: 23},
+        {name:'Katya', follow: 0, last_message:'I wanna play Dota 2 too 11', online:'online', id: 24},
+    ],
+
+    Profile -> Info -> setStatus:
+        const dumbSetProfile = () => {
+            let allData = {
+                aboutMe: "Something about me)",
+                userId : props.id,
+                lookingForAJob: true,
+                lookingForAJobDescription: "Yeah, i wanna find it!",
+                fullName: "Rurert XXL",
+                contacts: {
+                    github: "https://drive.google.com/file/d/1Fyzur_EuU5MuwgZjkUniG030_XLdTMtI/view?usp=sharing",
+                    vk: "https://drive.google.com/file/d/1Fyzur_EuU5MuwgZjkUniG030_XLdTMtI/view?usp=sharing",
+                    facebook: "https://drive.google.com/file/d/1Fyzur_EuU5MuwgZjkUniG030_XLdTMtI/view?usp=sharing",
+                    instagram: "https://drive.google.com/file/d/1Fyzur_EuU5MuwgZjkUniG030_XLdTMtI/view?usp=sharing",
+                    twitter: "https://drive.google.com/file/d/1Fyzur_EuU5MuwgZjkUniG030_XLdTMtI/view?usp=sharing",
+                    website: "https://drive.google.com/file/d/1Fyzur_EuU5MuwgZjkUniG030_XLdTMtI/view?usp=sharing",
+                    youtube: "https://drive.google.com/file/d/1Fyzur_EuU5MuwgZjkUniG030_XLdTMtI/view?usp=sharing",
+                    mainLink: "https://drive.google.com/file/d/1Fyzur_EuU5MuwgZjkUniG030_XLdTMtI/view?usp=sharing",
+                } 
+            };
+            console.log(allData);
+            props.setProfile(allData);
+        }
+
+
+-------------------------------------------------------------------------
+
+import React, { useCallback, useState } from 'react';
+import { Field, reduxForm } from 'redux-form'
+import { InputText, Textarea } from '../../../../common/formControls/formControls';
+import { maxLengthCreator, required } from '../../../../common/utils/validators/validators';
+import c from './changeProfile.module.css';
+
+const ChangeProfileForm = (props) => {
+    const maxLengthis = useCallback(maxLengthCreator(props.maxLength), [props.maxLength]);
+    
+    const [editMode, setEditMode] = useState(false);
+    const toggleEditMode = () => {
+        setEditMode(!editMode);
+    }
+
+    return <>
+    {
+        props.isPop
+        ?
+            editMode
+            ?
+                <div>
+                    <Field name={props.fieldName} 
+                        validate={props.isReq ? [required, maxLengthis] : [maxLengthis]} 
+                        placeholder={props.placeholder} component={props.component} />
+                    <button onClick={toggleEditMode} >Отправить</button>
+                </div>
+            :
+                <span className={c.span_is} onClick={toggleEditMode} >{props.info}</span>
+        :
+            editMode
+            ?
+                <Field onBlur={toggleEditMode} autoFocus={true} name={props.fieldName} 
+                    validate={props.isReq ? [required, maxLengthis] : [maxLengthis]} type={'text'} 
+                    placeholder={props.placeholder} component={props.component} />
+            : 
+                <span className={c.span_is} onClick={toggleEditMode} >{props.info}</span>
+    }
+    </>
+}
+
+const ChangeProfileFormRedux = reduxForm({
+    form: 'changeProfile'
+})(ChangeProfileForm);
+
+const ChangeProfile = (props) => {
+
+    const fileChosen = (e) => {
+        if(e.target.files.length) props.setPhoto(e.target.files[0]);
+    }
+
+    
+
+    return <div> 
+        <h1>Costomize profile</h1>
+        <div className={c.changeItem}> Add your photo: 
+            <ChangeProfileFormRedux component={() => <input type="file" onChange={fileChosen} className={c.addPhoto} />} 
+                info={"Rupert"} fieldName={"changePhoto"} placeholder={"Choose photo"} 
+                isReq={false} isPop={true} />
+        </div>
+        <div className={c.changeItem}> Name: 
+            <ChangeProfileFormRedux component={InputText} info={"Rupert"} fieldName={"changeName"} 
+                placeholder={"Enter your name"} maxLength={40} isReq={true} isPop={false} /> 
+        </div>
+        <div className={c.changeItem} className={c.check}> Looking for a job: 
+            <ChangeProfileFormRedux component={() => <input type="checkbox" className={c.lookForJob} />}
+                info={"Rupert"} fieldName={"changeJobCheck"} isReq={false} isPop={true} /> 
+        </div>
+        <div className={c.changeItem}> Looking for a job description: 
+            <ChangeProfileFormRedux component={Textarea} info={"Rupert"} fieldName={"changeJobDescription"} 
+                placeholder={"Enter your description"} maxLength={160} isReq={false} isPop={false} /> 
+        </div>
+    </div>
+}
+
+export default ChangeProfile;

@@ -1,0 +1,28 @@
+.main{
+    display: flex;
+}
+.about{
+    margin: 0 5px 0 0;
+}
+.status{
+    cursor: pointer;
+    min-height: 10px;
+    min-width: 200px;
+    padding: 1px 5px 1px 5px;
+    border-radius: 5px;
+}
+.status_is_null{
+    cursor: pointer;
+    color: grey;
+    min-height: 10px;
+    min-width: 200px;
+    padding: 1px 5px 1px 5px;
+    border-radius: 5px;
+}
+.status:hover,
+.status_is_null:hover{
+    background-color: rgba(172, 172, 172, 1);
+}
+.input_status {
+    outline: 0;
+}

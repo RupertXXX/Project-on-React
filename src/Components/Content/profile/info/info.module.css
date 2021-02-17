@@ -1,0 +1,52 @@
+.first_screen{
+  display: flex;
+  margin: 0 0 50px 0;
+}
+.main_photo{
+  margin: 15px 0 0 0;
+  border: 1px solid grey;
+  width: 30%;
+  height: 280px;
+}
+.main_text{
+  margin: 10px 0 10px 30px;
+  width: 100%;
+}
+.profile_name{
+  font-size: 25px;
+  margin: 0 0 15px 0;
+}
+.line{
+  width: 90%;
+  height: 2px;
+  margin: 0 auto;
+  background-color:  rgba(116, 116, 116, 0.7);
+  margin: 0 0 15px 0;
+}
+.aboutMe{
+  font-size: 20px;
+}
+.contacts{
+  margin: 10px 0;
+  padding: 10px 0;
+}
+.contacts_title{
+  font-size: 21px;
+  font-weight: 500;
+  margin: 0 0 7px 0;
+}
+.loofingforajob{
+  margin: 10px 0;
+  padding: 10px 0;
+}
+.loofingforajob_flex{
+  display: flex;
+  align-items: center;
+}
+.loofingforajob_flex div{
+  margin: 0 10px 0 0;
+}
+.loofingforajob img{
+  width: 15px;
+  height: 15px;
+}

@@ -1,0 +1,24 @@
+.addPost_title{
+    text-align: center;
+    font-size: 22px;
+    font-weight: 500;
+    margin: 0 0 20px 0;
+}
+.addPost{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    margin: 0 0 40px 0;
+}
+.addPost_button{
+    font-size: 30px;
+    text-align: center;
+    width: 35px;
+    height: 35px;
+    margin: 0 0 0 15px;
+    background-color: rgba(116, 116, 116, 0.4);
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    cursor: pointer;
+}

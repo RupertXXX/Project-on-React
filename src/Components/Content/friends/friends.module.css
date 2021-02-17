@@ -1,0 +1,31 @@
+.friends_main{
+    min-height: 600px;
+}
+.morediv{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.morebutton{
+    text-align: center;
+    width: 180px;
+    height: 37px;
+    color: black;
+    font-size: 18px;
+    background-color: rgba(116, 116, 116, 0.7);
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.counter{
+    display: flex;
+    margin: 0 0 15px 0;
+}
+.counter div{
+    margin: 0 10px;
+    cursor: pointer;
+}
+.selected{
+    font-weight: 900;
+}

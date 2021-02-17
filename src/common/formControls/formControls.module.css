@@ -1,0 +1,119 @@
+.main{
+    display: flex;
+}
+.addPost_text{
+    min-height: 80px;
+    width: 84%;
+    padding: 10px 0 5px 15px;
+    background-color: rgba(116, 116, 116, 0.4);
+    border: 0.5px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    outline: none;
+    resize: none;
+    font-family: Noto Sans, sans-serif;
+    font-size: 16px;
+}
+.addPost_text::-webkit-input-placeholder{
+    font-size: 16px;
+    color: rgba(87, 87, 87, 0.9);
+}
+.addPost_text_error{
+    min-height: 80px;
+    width: 84%;
+    padding: 10px 0 5px 15px;
+    background-color: rgba(116, 116, 116, 0.4);
+    border-radius: 6px;
+    outline: none;
+    resize: none;
+    font-family: Noto Sans, sans-serif;
+    font-size: 16px;
+    border: 1px solid rgb(227,30,37);
+}
+.addPost_text_error::-webkit-input-placeholder{
+    font-size: 16px;
+    color: rgb(227,30,37);
+}
+.addPost_text_error::-webkit-scrollbar {
+    width: 8px;
+    border-radius: 30px;
+    background-color: rgba(116, 116, 116, 0.4);
+}
+.addPost_text_error::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+}
+.addPost_text::-webkit-scrollbar {
+    width: 6px;
+    border-radius: 30px;
+    background-color: rgba(116, 116, 116, 0.4);
+}
+.addPost_text::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+}
+.error_text_message{
+    display: block;
+    color: white;
+    height: 80px;
+    width: 10%;
+    padding: 10px 10px 5px 10px;
+    background-color: rgba(227,30,37, 0.7);
+    border: 0.5px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    margin: 0 0 0 10px;
+    font-size: 15px;
+    text-align: center;
+}
+.error_text_message_none{
+    display: none;
+}
+
+.addPost_input_text{
+    height: 20px;
+    width: 300px;
+    padding: 2px 0 2px 15px;
+    margin: 0 0 0 5px;
+    background-color: rgba(116, 116, 116, 0.4);
+    border: 0.5px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    outline: none;
+    resize: none;
+    font-family: Noto Sans, sans-serif;
+    font-size: 16px;
+}
+.addPost_input_text::-webkit-input-placeholder{
+    font-size: 16px;
+    color: rgba(87, 87, 87, 0.9);
+}
+.addPost_input_text_error{
+    height: 20px;
+    width: 300px;
+    padding: 2px 0 2px 15px;
+    margin: 0 0 0 5px;
+    background-color: rgba(116, 116, 116, 0.4);
+    border-radius: 6px;
+    outline: none;
+    resize: none;
+    font-family: Noto Sans, sans-serif;
+    font-size: 16px;
+    border: 1px solid rgb(227,30,37);
+}
+.addPost_input_text_error::-webkit-input-placeholder{
+    font-size: 16px;
+    color: rgb(227,30,37);
+}
+.error_input_text_message{
+    display: block;
+    color: white;
+    height: 22px;
+    padding: 2px 10px 2px 10px;
+    background-color: rgba(227,30,37, 0.7);
+    border: 0.5px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    margin: 0 0 0 10px;
+    font-size: 15px;
+    text-align: center;
+}
+.error_input_text_message_none{
+    display: none;
+}
