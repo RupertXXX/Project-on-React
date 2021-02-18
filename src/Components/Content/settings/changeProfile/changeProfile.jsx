@@ -68,7 +68,7 @@ const ChangeProfile = (props) => {
     const setInfo = (formData) => {
         if(formData.lookingForAJobDescription) info.lookingForAJobDescription = formData.lookingForAJobDescription;
         if(formData.fullName) info.fullName = formData.fullName;
-        formData.lookingForAJob = jobValue;
+        info.lookingForAJob = jobValue;
         info.AboutMe = "about me";
         props.setProfileInfo(info);
     }

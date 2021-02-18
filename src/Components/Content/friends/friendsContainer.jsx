@@ -3,10 +3,12 @@ import { connect } from 'react-redux';
 import {followCreator, 
         unfollowCreator, 
         selectPageCreator, 
+        getUsersThunkCreator,
         getFriendsThunkCreator, 
         followThunkCreator, 
         unfollowThunkCreator, } from '../../../redux/reducers/friendsReducer';
-import {getFriendsComplecated,
+import {getUsersComplecated,
+        getFriends,
         getPageSize,
         getTotalFriendsCount,
         getCurrentPage,
@@ -18,11 +20,12 @@ import Loading from '../../../common/loading/loading';
 class FriendsContainerAPI extends React.Component {
 
     componentDidMount() {
-        this.props.getFriends(this.props.currentPage, this.props.pageSize);
+        this.props.getUsers(this.props.currentPage, this.props.pageSize);
+        this.props.getFriends();
     }
     newRequestOnClick = (obj) => {
         this.props.selectPage(obj);
-        this.props.getFriends(obj, this.props.pageSize);
+        this.props.getUsers(obj, this.props.pageSize);
     }
     render() {
         return (
@@ -36,7 +39,8 @@ class FriendsContainerAPI extends React.Component {
 
 let mapStateToProps = (state) => {
     return {
-        friends_onefriend: getFriendsComplecated(state),
+        friendsAllUsers: getUsersComplecated(state),
+        friends: getFriends(state),
         pageSize: getPageSize(state),
         totalFriendsCount: getTotalFriendsCount(state),
         currentPage: getCurrentPage(state),
@@ -56,8 +60,11 @@ let mapDispatchToProps = (dispatch) => {
         selectPage: (newcurrent) => {
             dispatch(selectPageCreator(newcurrent));
         },
-        getFriends: (currentPage, pageSize) => {
-            dispatch(getFriendsThunkCreator(currentPage, pageSize));
+        getUsers: (currentPage, pageSize) => {
+            dispatch(getUsersThunkCreator(currentPage, pageSize));
+        },
+        getFriends: () => {
+            dispatch(getFriendsThunkCreator());
         },
         followFriend: (index) => {
             dispatch(followThunkCreator(index))

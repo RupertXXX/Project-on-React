@@ -1,12 +1,17 @@
 import {createSelector} from 'reselect';
 
-const getFriends = (state) => {
-    let friends = state.friendsPage.friendsAllUsersData;
-    return friends;
+const getUsers = (state) => {
+    let users = state.friendsPage.friendsAllUsersData;
+    return users;
 };
-export const getFriendsComplecated = createSelector( getFriends, (friends) => {
-    return friends;
+export const getUsersComplecated = createSelector( getUsers, (users) => {
+    return users;
 });
+
+export const getFriends = (state) => {
+    let friends = state.friendsPage.friendsData;
+    return friends;
+}
 
 export const getPageSize = (state) => {
     let pageSize = state.friendsPage.pageSize;
