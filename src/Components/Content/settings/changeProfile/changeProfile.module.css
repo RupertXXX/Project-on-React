@@ -30,6 +30,7 @@
     margin: 0 0 0 15px;
 }
 .submit {
+    margin: 15px 0 10px 0;
     outline: none;
     border: 1px solid rgba(210, 210, 210, 1);
     width: 120px;

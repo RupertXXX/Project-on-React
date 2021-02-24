@@ -7,13 +7,13 @@ const LoginForm = (props) => {
     return (
         <form className={c.main_form} onSubmit={props.handleSubmit}>
             <div>
-                <Field validate={[required]} name={'login'} type={'email'} placeholder={'login'} component={'input'} />
+                <Field className={c.login} validate={[required]} name={'login'} type={'email'} placeholder={'login'} component={'input'} />
             </div>
             <div>
-                <Field validate={[required]} name={'password'} type={'password'} placeholder={'password'} component={'input'} />
+                <Field className={c.password} validate={[required]} name={'password'} type={'password'} placeholder={'password'} component={'input'} />
             </div>
             <div>
-                <Field name={'rememberMe'} type={'checkbox'} component={'input'} /> Remember me
+                <Field className={c.remember} name={'rememberMe'} type={'checkbox'} component={'input'} /> Remember me
             </div>
             {
                 (props.error) &&
@@ -31,7 +31,7 @@ const LoginForm = (props) => {
                 </div>
             }
             <div>
-                <button name={'submit'} >Login</button>
+                <button className={c.btn} name={'submit'} >Login</button>
             </div>
         </form>
     );

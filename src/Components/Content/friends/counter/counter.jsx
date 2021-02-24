@@ -15,26 +15,27 @@ const Counter = (props) => {
     let leftPortionNumber = (portionNumber - 1) * props.portionSize + 1;
     let rightPortionNumber = portionNumber * props.portionSize;
 
-    return <>
+    return <div className={c.main}>
         <div>
             {portionNumber > 1 &&
-                <button onClick={() => {setPortionNumber(portion => portion - 1)}}>prev</button> 
+                <button className={c.btn} onClick={() => {setPortionNumber(portion => portion - 1)}}>{'\u003c'}</button> 
             }
         </div>
         {counter
             .filter(p => p >= leftPortionNumber && p <= rightPortionNumber)
             .map(obj => 
-                <div key={obj} className={props.currentPage === obj ? c.selected : undefined} onClick={() => {props.newRequestOnClick(obj)} } >
+                <div key={obj} className={props.currentPage === obj ? c.selected : c.noselected} 
+                onClick={() => {props.newRequestOnClick(obj)} } >
                     {obj}
                 </div>
             )
         }
         <div>
             {portionNumber < portionCount &&
-                <button onClick={() => {setPortionNumber(portion => portion + 1)}}>next</button> 
+                <button className={c.btn} onClick={() => {setPortionNumber(portion => portion + 1)}}>{'\u003e'}</button> 
             }
         </div>
-    </>
+    </div>
 }
 
 export default Counter;

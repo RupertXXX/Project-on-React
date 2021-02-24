@@ -8,7 +8,7 @@
     display: flex;
     flex-direction: row;
     align-items: flex-end;
-    margin: 0 0 40px 0;
+    margin: 0 0 20px 0;
 }
 .addPost_button{
     font-size: 30px;

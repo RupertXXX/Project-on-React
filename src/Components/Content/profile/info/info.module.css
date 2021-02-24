@@ -50,3 +50,18 @@
   width: 15px;
   height: 15px;
 }
+.costomize{
+  text-decoration: none;
+  margin: 20px 0 0 0;
+  padding: 6px 12px;
+  outline: none;
+  border: 1px solid rgba(210, 210, 210, 1);
+  width: 120px;
+  height: 40px;
+  color: black;
+  font-weight: 600;
+  font-size: 17px;
+  background-color: rgba(116, 116, 116, 0.5);
+  border-radius: 5px;
+  cursor: pointer;
+}

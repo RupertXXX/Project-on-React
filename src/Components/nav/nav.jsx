@@ -8,7 +8,7 @@ const Nav = () => {
             <ul>
                 <li> <NavLink to="/profile" activeClassName={c.active}>Profile</NavLink> </li>
                 <li> <NavLink to="/messages" activeClassName={c.active}>Messages</NavLink> </li>
-                <li> <NavLink to="/friends" activeClassName={c.active}>Friends</NavLink> </li>
+                <li> <NavLink to="/users" activeClassName={c.active}>Users</NavLink> </li>
                 {/* <li> <NavLink to="/my_friends" activeClassName={c.active}>Friends</NavLink> </li> */}
                 <li> <NavLink to="/news" activeClassName={c.active}>News</NavLink> </li>
                 <li> <NavLink to="/games" activeClassName={c.active}>Games</NavLink> </li>

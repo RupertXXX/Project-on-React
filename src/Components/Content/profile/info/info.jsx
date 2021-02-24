@@ -1,4 +1,5 @@
 import React from 'react';
+import {NavLink} from 'react-router-dom';
 import ProfileStatusFunc from './status/status';
 import Loading from '../../../../common/loading/loading';
 import avatar from '../../../../assets/images/avatar.jpg';
@@ -52,6 +53,7 @@ const Info = (props) => {
                         </div>
                         <div> Looking for a job description: {props.profileInfo.lookingForAJobDescription} </div>
                     </div>
+                    <NavLink to="/settings#costomize" className={c.costomize}>Costomize profile</NavLink>
                 </div> 
             </div>
         );

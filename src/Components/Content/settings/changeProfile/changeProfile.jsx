@@ -77,7 +77,7 @@ const ChangeProfile = (props) => {
         return <Loading />
     }
     else {
-        return <div> 
+        return <div id="costomize" > 
             <h1>Costomize profile</h1>
             <ChangeProfileFormRedux onSubmit={setInfo} setPhoto={props.setPhoto} setJobCheck={setJobValue} info={props.info} />
         </div>

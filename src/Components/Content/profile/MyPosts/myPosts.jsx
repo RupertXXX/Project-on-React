@@ -30,6 +30,7 @@ const MyPosts = (props) => {
         <div>
             <div className={c.addPost_title}>Add post</div>
             <MyPostsFormWithRedux onSubmit={sendPost} />
+            <div className={c.addPost_title}>My posts</div>
             { profilePostsData_is  /* Post */}
         </div>
     );

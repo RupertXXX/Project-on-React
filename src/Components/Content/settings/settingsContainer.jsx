@@ -1,6 +1,8 @@
 import { connect } from 'react-redux';
 import Settings from './settings';
 import {authLogoutThunkCreator} from '../../../redux/reducers/authReducer';
+import { compose } from 'redux';
+import withLoginCheck from '../../HOCs/isLoginHoc';
 
 const mstp = (state) => {
     return {
@@ -16,5 +18,7 @@ const mdtp = (dispatch) => {
     }
 }
 
-const SettingsContainer = connect(mstp, mdtp)(Settings);
-export default SettingsContainer;
+export default compose(
+    connect(mstp, mdtp),
+    withLoginCheck,)
+    (Settings);

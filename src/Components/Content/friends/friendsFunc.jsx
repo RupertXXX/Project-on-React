@@ -42,7 +42,7 @@ const FriendsFunc = (props) => {
                              totalFriendsCount={props.totalFriendsCount}
                              pageSize={props.pageSize}
                              newRequestOnClick={props.newRequestOnClick} 
-                             portionSize={10} />
+                             portionSize={15} />
                 </div>
                 {
                     // friedsUsersToggle
