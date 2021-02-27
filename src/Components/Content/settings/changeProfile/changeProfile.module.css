@@ -25,9 +25,19 @@
     align-items: flex-start;
     margin: 7.5px 0 7.5px 0;
 }
+.changeItemImage{
+    display: flex;
+    align-items: flex-start;
+    margin: 7.5px 0 10px 17px;
+}
 .lookForJob{
     cursor: pointer;
     margin: 0 0 0 15px;
+}
+.sendingCostom{
+    border: 2px solid rgba(172, 172, 172, 1);
+    border-radius: 8px;
+    padding: 2px 0 2px 15px;
 }
 .submit {
     margin: 15px 0 10px 0;

@@ -37,21 +37,23 @@ const ChangeProfileForm = (props) => {
 
     return <>
         <form action="" onSubmit={props.handleSubmit}>
-            <div className={c.changeItem}> Add your photo: 
+            <div className={c.changeItemImage}> Add your photo:
                 <input type="file" onChange={fileChosen} className={c.addPhoto} placeholder={"Choose photo"} />
             </div>
-            <div className={c.changeItem}> Name: 
-                <OneForm component={InputText} info={props.info.fullName} fieldName={"fullName"} 
-                    placeholder={"Enter your name"} maxLength={40} isReq={true}/> 
+            <div className={c.sendingCostom}>
+                <div className={c.changeItem}> Name: 
+                    <OneForm component={InputText} info={props.info.fullName} fieldName={"fullName"} 
+                        placeholder={"Enter your name"} maxLength={40} isReq={true}/> 
+                </div>
+                <div className={c.changeItem}> Looking for a job: 
+                    <input type="checkbox" onChange={jobCheckChosen} className={c.lookForJob} /> 
+                </div>
+                <div className={c.changeItem}> Looking for a job description: 
+                    <OneForm component={Textarea} info={props.info.lookingForAJobDescription} fieldName={"lookingForAJobDescription"} 
+                        placeholder={"Enter your description"} maxLength={160} isReq={false}/> 
+                </div>
+                <button name="submit" className={c.submit}> Отправить </button>
             </div>
-            <div className={c.changeItem}> Looking for a job: 
-                <input type="checkbox" onChange={jobCheckChosen} className={c.lookForJob} /> 
-            </div>
-            <div className={c.changeItem}> Looking for a job description: 
-                <OneForm component={Textarea} info={props.info.lookingForAJobDescription} fieldName={"lookingForAJobDescription"} 
-                    placeholder={"Enter your description"} maxLength={160} isReq={false}/> 
-            </div>
-            <button name="submit" className={c.submit}> Отправить </button>
         </form>
     </>
 }

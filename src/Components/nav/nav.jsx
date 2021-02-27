@@ -12,7 +12,7 @@ const Nav = () => {
                 {/* <li> <NavLink to="/my_friends" activeClassName={c.active}>Friends</NavLink> </li> */}
                 <li> <NavLink to="/news" activeClassName={c.active}>News</NavLink> </li>
                 <li> <NavLink to="/games" activeClassName={c.active}>Games</NavLink> </li>
-                <li> <NavLink to="/photos" activeClassName={c.active}>Photos</NavLink> </li>
+                {/* <li> <NavLink to="/photos" activeClassName={c.active}>Photos</NavLink> </li> */}
                 <li className={c.nav_settings}> <NavLink to="/settings" activeClassName={c.active}>Settings</NavLink> </li>
             </ul>
         </nav>

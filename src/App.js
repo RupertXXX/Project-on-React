@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, withRouter } from 'react-router-dom';
+import { Redirect, Route, Switch, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 import {initializeApp} from './redux/reducers/appReducer';
@@ -32,15 +32,17 @@ class App extends React.Component{
             <Nav />
             <div className="content">
               
-              
-              <Route path='/messages' render={ () => <MessagesContainer /> } />
-              <Route path='/profile/:userId?' render={ () => <ProfileContainer /> } />
-              <Route path='/users' render={ () => <FriendsContainer /> } />
-              <Route path='/news' render={ () => <NewsContainer /> } />
-              <Route path='/games' render={ () => <Game /> } />
-              <Route path='/login' render={ () => <LoginContainer /> } />
-              <Route path='/settings' render={ () => <SettingsContainer />} /> 
-              
+              <Switch>
+                <Route exact path='/' render={ () => <Redirect to='/profile' /> } />
+                <Route path='/messages' render={ () => <MessagesContainer /> } />
+                <Route path='/profile/:userId?' render={ () => <ProfileContainer /> } />
+                <Route path='/users' render={ () => <FriendsContainer /> } />
+                <Route path='/news' render={ () => <NewsContainer /> } />
+                <Route path='/games' render={ () => <Game /> } />
+                <Route path='/login' render={ () => <LoginContainer /> } />
+                <Route path='/settings' render={ () => <SettingsContainer />} /> 
+                <Route path='*' render={ () => <div>404 NOT FOUND</div>} /> 
+              </Switch>
             </div>
           </div>
         </div>
