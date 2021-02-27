@@ -1,0 +1,26 @@
+.table{
+    width: 150px;
+    border: 1px solid black;
+}
+.row1{
+    display: flex;
+}
+.row2{
+    display: flex;
+}
+.row3{
+    display: flex;
+}
+.item{
+    height: 50px;
+    width: 50px;
+    border: 1px solid black;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.item img{
+    height: 40px;
+    width: 40px;
+}
