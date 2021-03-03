@@ -1,3 +1,7 @@
+.main{
+    display: flex;
+    align-items: center;
+}
 .table{
     width: 150px;
     border: 1px solid black;
@@ -23,4 +27,9 @@
 .item img{
     height: 40px;
     width: 40px;
+}
+.text{
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 0 20px;
 }
