@@ -1,7 +1,10 @@
-// import React from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
-import Login from './login';
 import { authLoginThunkCreator, authLogoutThunkCreator, getCaptchaThunkCreator } from '../../../redux/reducers/authReducer';
+import { compose } from 'redux';
+import withSuspense from '../../HOCs/suspenseHoc';
+import withErrorBoundary from '../../HOCs/errorBoundaryHoc';
+const Login = React.lazy(() => import('./login'));
 
 let mapStateToProps = (state) => {
     return {
@@ -24,6 +27,7 @@ let mapDispatchToProps = (dispatch) => {
     }
 }
 
-const LoginContainer = connect(mapStateToProps, mapDispatchToProps)(Login);
-
-export default LoginContainer;
+export default compose( withSuspense,
+                        withErrorBoundary,
+                        connect(mapStateToProps, mapDispatchToProps),
+                        )(Login);

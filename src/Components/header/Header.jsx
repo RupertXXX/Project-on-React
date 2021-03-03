@@ -22,7 +22,12 @@ const Header = (props) => {
                     <img src={search} alt="logo" className={c.header_search_icon} />
                     {props.isLogin === true ?
                         <NavLink to='/profile'>
-                            <img src={avatar} alt="logo" className={c.header_photo} />
+                            <img src={ !props.profileInfo ? 
+                                        avatar :
+                                            props.profileInfo.photos.small ? 
+                                            props.profileInfo.photos.small : 
+                                                avatar} 
+                                alt="logo" className={c.header_photo} />
                         </NavLink>
                     :
                         <div>

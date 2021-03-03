@@ -22,6 +22,8 @@ const StartTimer = (props) => {
     </div>
 }
 
+let a = {};
+
 const HurryUp = () => {
     const score = 50;
     let [myValue, setMyValue] = useState(0);
@@ -37,7 +39,7 @@ const HurryUp = () => {
 
     return <div>
 
-        <h3>Hurry up to collect {score} score</h3>
+        <h3> Hurry up to collect {score} score</h3>
         {
             myValue > 0 
             ? <StartTimer isActive={isActive} />

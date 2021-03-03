@@ -1,6 +1,7 @@
 import React from 'react';
 import Example from './someExample/example';
 import HurryUp from './hurryUp/hurryUp';
+import ErrorBoundary from '../../../common/errorBoundary/errorBoundary'
 
 const Game = (props) => {
     return <>
@@ -8,7 +9,9 @@ const Game = (props) => {
         <Example />
         <div>------------------------------------------------------------------------------------------</div>
         <h1>Hurry up</h1>
-        <HurryUp />
+        <ErrorBoundary name="game">
+            <HurryUp />
+        </ErrorBoundary>
         <div>------------------------------------------------------------------------------------------</div>
     </>
 }

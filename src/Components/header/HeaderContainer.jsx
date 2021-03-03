@@ -6,6 +6,7 @@ let mapStateToProps = (state) => ({
     data: state.auth.data,
     messages: state.auth.messages,
     isLogin: state.auth.isLogin,
+    profileInfo: state.profilePage.profileInfo,
 })
 
 const HeaderContainer = connect(mapStateToProps, null)(Header);

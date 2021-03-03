@@ -1,5 +1,9 @@
+import React from 'react';
 import { connect } from 'react-redux';
-import News from './news';
+import withErrorBoundary from '../../HOCs/errorBoundaryHoc';
+import withSuspense from '../../HOCs/suspenseHoc';
+import {compose} from 'redux';
+const News = React.lazy(() => import('./news'));
 
 const mapStateToProps = (state) => {
     return {
@@ -11,6 +15,7 @@ const mapDispatchToProps = (dispatch) => {
     return {}
 }
 
-const NewsContainer = connect(mapStateToProps, mapDispatchToProps)(News);
-
-export default NewsContainer;
+export default compose( withSuspense, 
+                        withErrorBoundary, 
+                        connect(mapStateToProps, mapDispatchToProps)
+                        )(News);

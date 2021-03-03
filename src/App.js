@@ -3,17 +3,19 @@ import { Redirect, Route, Switch, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 import {initializeApp} from './redux/reducers/appReducer';
+import './App.css';
+import withSuspense from './Components/HOCs/suspenseHoc';
 import Loading from './common/loading/loading';
 import Nav from './Components/nav/nav';
 import HeaderContainer from './Components/header/HeaderContainer';
 import MessagesContainer from './Components/Content/messages/messagesContainer';
 import FriendsContainer from './Components/Content/friends/friendsContainer';
-import NewsContainer from './Components/Content/news/newsContainer';
 import ProfileContainer from './Components/Content/profile/profileContainer';
-import LoginContainer from './Components/Content/login/loginContainer';
 import Game from './Components/Content/games/game';
-import './App.css';
 import SettingsContainer from './Components/Content/settings/settingsContainer';
+import NewsContainer from './Components/Content/news/newsContainer';
+import LoginContainer from './Components/Content/login/loginContainer';
+import ErrorBoundary from './common/errorBoundary/errorBoundary';
 
 class App extends React.Component{
   componentDidMount() {
@@ -23,7 +25,6 @@ class App extends React.Component{
     if(this.props.initialized === false) {
       return <Loading />
     }
-    
     return (
       <div className="main">
         <HeaderContainer />
@@ -31,16 +32,15 @@ class App extends React.Component{
           <div className="grid">
             <Nav />
             <div className="content">
-              
               <Switch>
                 <Route exact path='/' render={ () => <Redirect to='/profile' /> } />
-                <Route path='/messages' render={ () => <MessagesContainer /> } />
-                <Route path='/profile/:userId?' render={ () => <ProfileContainer /> } />
-                <Route path='/users' render={ () => <FriendsContainer /> } />
-                <Route path='/news' render={ () => <NewsContainer /> } />
-                <Route path='/games' render={ () => <Game /> } />
-                <Route path='/login' render={ () => <LoginContainer /> } />
-                <Route path='/settings' render={ () => <SettingsContainer />} /> 
+                <Route path='/messages' render={ () => <ErrorBoundary  name="webpage"> <MessagesContainer /> </ErrorBoundary> } />
+                <Route path='/profile/:userId?' render={ () => <ErrorBoundary  name="webpage"> <ProfileContainer /> </ErrorBoundary> } />
+                <Route path='/users' render={ () => <ErrorBoundary  name="webpage"> <FriendsContainer /> </ErrorBoundary> } />
+                <Route path='/news' render={ () => <NewsContainer forErrorName="webpage" />} />
+                <Route path='/games' render={ () => <ErrorBoundary  name="webpage"> <Game /> </ErrorBoundary> } />
+                <Route path='/login' render={() => <LoginContainer forErrorName="webpage" />} />
+                <Route path='/settings' render={ () => <ErrorBoundary  name="webpage"> <SettingsContainer /> </ErrorBoundary> } /> 
                 <Route path='*' render={ () => <div>404 NOT FOUND</div>} /> 
               </Switch>
             </div>
@@ -60,7 +60,7 @@ let mapStateToProps = (state) => {
 let mapDispatchToProps = (dispatch) => {
   return {
       initializeApp: () => {
-          dispatch(initializeApp())
+        dispatch(initializeApp())
       }
   }
 }

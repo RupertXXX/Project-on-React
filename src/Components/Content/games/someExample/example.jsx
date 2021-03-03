@@ -42,7 +42,7 @@ const Example = (props) => {
     const aiMove = () => {
         let circ = Math.floor(Math.random() * (9 - 0) + 0);
         while(true){
-            if(disabledItems.current[circ] != 0) circ = Math.floor(Math.random() * (9 - 0) + 0);
+            if(disabledItems.current[circ] !== 0) circ = Math.floor(Math.random() * (9 - 0) + 0);
             else break;
         }
         if(disabledItems.current[circ] === 0){
@@ -78,19 +78,19 @@ const Example = (props) => {
     return <>
         <div className={c.table}>
             <div className={c.row1}>
-                <div onClick={() => move(0)} className={c.item}>{tableItems[0] === 0 ? null : tableItems[0] === 1 ? <img src={cross} /> : <img src={circle} />}</div>
-                <div onClick={() => move(1)} className={c.item}>{tableItems[1] === 0 ? null : tableItems[1] === 1 ? <img src={cross} /> : <img src={circle} />}</div>
-                <div onClick={() => move(2)} className={c.item}>{tableItems[2] === 0 ? null : tableItems[2] === 1 ? <img src={cross} /> : <img src={circle} />}</div>
+                <div onClick={() => move(0)} className={c.item}>{tableItems[0] === 0 ? null : tableItems[0] === 1 ? <img src={cross} alt="cross" /> : <img src={circle} alt="circle" />}</div>
+                <div onClick={() => move(1)} className={c.item}>{tableItems[1] === 0 ? null : tableItems[1] === 1 ? <img src={cross} alt="cross" /> : <img src={circle} alt="circle" />}</div>
+                <div onClick={() => move(2)} className={c.item}>{tableItems[2] === 0 ? null : tableItems[2] === 1 ? <img src={cross} alt="cross" /> : <img src={circle} alt="circle" />}</div>
             </div>
             <div className={c.row2}>
-                <div onClick={() => move(3)} className={c.item}>{tableItems[3] === 0 ? null : tableItems[3] === 1 ? <img src={cross} /> : <img src={circle} />}</div>
-                <div onClick={() => move(4)} className={c.item}>{tableItems[4] === 0 ? null : tableItems[4] === 1 ? <img src={cross} /> : <img src={circle} />}</div>
-                <div onClick={() => move(5)} className={c.item}>{tableItems[5] === 0 ? null : tableItems[5] === 1 ? <img src={cross} /> : <img src={circle} />}</div>
+                <div onClick={() => move(3)} className={c.item}>{tableItems[3] === 0 ? null : tableItems[3] === 1 ? <img src={cross} alt="cross" /> : <img src={circle} alt="circle" />}</div>
+                <div onClick={() => move(4)} className={c.item}>{tableItems[4] === 0 ? null : tableItems[4] === 1 ? <img src={cross} alt="cross" /> : <img src={circle} alt="circle" />}</div>
+                <div onClick={() => move(5)} className={c.item}>{tableItems[5] === 0 ? null : tableItems[5] === 1 ? <img src={cross} alt="cross" /> : <img src={circle} alt="circle" />}</div>
             </div>
             <div className={c.row3}>
-                <div onClick={() => move(6)} className={c.item}>{tableItems[6] === 0 ? null : tableItems[6] === 1 ? <img src={cross} /> : <img src={circle} />}</div>
-                <div onClick={() => move(7)} className={c.item}>{tableItems[7] === 0 ? null : tableItems[7] === 1 ? <img src={cross} /> : <img src={circle} />}</div>
-                <div onClick={() => move(8)} className={c.item}>{tableItems[8] === 0 ? null : tableItems[8] === 1 ? <img src={cross} /> : <img src={circle} />}</div>
+                <div onClick={() => move(6)} className={c.item}>{tableItems[6] === 0 ? null : tableItems[6] === 1 ? <img src={cross} alt="cross" /> : <img src={circle} alt="circle" />}</div>
+                <div onClick={() => move(7)} className={c.item}>{tableItems[7] === 0 ? null : tableItems[7] === 1 ? <img src={cross} alt="cross" /> : <img src={circle} alt="circle" />}</div>
+                <div onClick={() => move(8)} className={c.item}>{tableItems[8] === 0 ? null : tableItems[8] === 1 ? <img src={cross} alt="cross" /> : <img src={circle} alt="circle" />}</div>
             </div>
         </div>
     </>
