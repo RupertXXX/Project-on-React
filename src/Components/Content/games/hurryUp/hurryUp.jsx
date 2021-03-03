@@ -22,8 +22,6 @@ const StartTimer = (props) => {
     </div>
 }
 
-let a = {};
-
 const HurryUp = () => {
     const score = 50;
     let [myValue, setMyValue] = useState(0);

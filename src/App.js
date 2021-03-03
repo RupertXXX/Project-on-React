@@ -18,9 +18,17 @@ import LoginContainer from './Components/Content/login/loginContainer';
 import ErrorBoundary from './common/errorBoundary/errorBoundary';
 
 class App extends React.Component{
+  catchAllUnhandledErrors = (promiseRejectionEvent) => {
+    console.error(promiseRejectionEvent);
+  }
   componentDidMount() {
     this.props.initializeApp();
+    window.addEventListener('unhandledrejection', this.catchAllUnhandledErrors);
   }
+  componentWillUnmount() {
+    window.removeEventListener('unhandledrejection', this.catchAllUnhandledErrors);
+  }
+
   render(){
     if(this.props.initialized === false) {
       return <Loading />
