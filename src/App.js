@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { compose } from 'redux';
 import {initializeApp} from './redux/reducers/appReducer';
 import './App.css';
-import withSuspense from './Components/HOCs/suspenseHoc';
+import NotFound from './Components/notFound/notFound'
 import Loading from './common/loading/loading';
 import Nav from './Components/nav/nav';
 import HeaderContainer from './Components/header/HeaderContainer';
@@ -41,7 +41,7 @@ class App extends React.Component{
                 <Route path='/games' render={ () => <ErrorBoundary  name="webpage"> <Game /> </ErrorBoundary> } />
                 <Route path='/login' render={() => <LoginContainer forErrorName="webpage" />} />
                 <Route path='/settings' render={ () => <ErrorBoundary  name="webpage"> <SettingsContainer /> </ErrorBoundary> } /> 
-                <Route path='*' render={ () => <div>404 NOT FOUND</div>} /> 
+                <Route path='*' render={ () => <NotFound /> } /> 
               </Switch>
             </div>
           </div>
